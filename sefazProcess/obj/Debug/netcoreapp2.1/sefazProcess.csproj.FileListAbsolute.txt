@@ -1,0 +1,14 @@
+C:\Users\rafael\Documents\0000\Projetos\sefazProcess\sefazProcess\bin\Debug\netcoreapp2.1\sefazProcess.deps.json
+C:\Users\rafael\Documents\0000\Projetos\sefazProcess\sefazProcess\bin\Debug\netcoreapp2.1\sefazProcess.runtimeconfig.json
+C:\Users\rafael\Documents\0000\Projetos\sefazProcess\sefazProcess\bin\Debug\netcoreapp2.1\sefazProcess.runtimeconfig.dev.json
+C:\Users\rafael\Documents\0000\Projetos\sefazProcess\sefazProcess\bin\Debug\netcoreapp2.1\sefazProcess.dll
+C:\Users\rafael\Documents\0000\Projetos\sefazProcess\sefazProcess\obj\Debug\netcoreapp2.1\sefazProcess.csprojAssemblyReference.cache
+C:\Users\rafael\Documents\0000\Projetos\sefazProcess\sefazProcess\obj\Debug\netcoreapp2.1\sefazProcess.csproj.CoreCompileInputs.cache
+C:\Users\rafael\Documents\0000\Projetos\sefazProcess\sefazProcess\obj\Debug\netcoreapp2.1\sefazProcess.RazorAssemblyInfo.cache
+C:\Users\rafael\Documents\0000\Projetos\sefazProcess\sefazProcess\obj\Debug\netcoreapp2.1\sefazProcess.RazorAssemblyInfo.cs
+C:\Users\rafael\Documents\0000\Projetos\sefazProcess\sefazProcess\obj\Debug\netcoreapp2.1\sefazProcess.AssemblyInfoInputs.cache
+C:\Users\rafael\Documents\0000\Projetos\sefazProcess\sefazProcess\obj\Debug\netcoreapp2.1\sefazProcess.AssemblyInfo.cs
+C:\Users\rafael\Documents\0000\Projetos\sefazProcess\sefazProcess\obj\Debug\netcoreapp2.1\sefazProcess.RazorTargetAssemblyInfo.cache
+C:\Users\rafael\Documents\0000\Projetos\sefazProcess\sefazProcess\bin\Debug\netcoreapp2.1\sefazProcess.pdb
+C:\Users\rafael\Documents\0000\Projetos\sefazProcess\sefazProcess\obj\Debug\netcoreapp2.1\sefazProcess.dll
+C:\Users\rafael\Documents\0000\Projetos\sefazProcess\sefazProcess\obj\Debug\netcoreapp2.1\sefazProcess.pdb
