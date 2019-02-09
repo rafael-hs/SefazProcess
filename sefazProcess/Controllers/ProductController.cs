@@ -51,8 +51,6 @@ namespace sefazProcess.Controllers
             if (products == null) return NotFound();
             return Ok(products);
         }
-
         #endregion
-     
     }
 }
