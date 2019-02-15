@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using sefazProcess.Business;
 using sefazProcess.Models;
@@ -28,9 +29,16 @@ namespace sefazProcess.Controllers
         [HttpGet, Route("{id}")]
         public ActionResult FindById(long id)
         {
+            try
+            {
             var product = _productBus.FindById(id);
             if (product == null) return NotFound();
             return Ok(product);
+            }
+            catch
+            {
+                return NotFound("não existe esse registro");
+            }
         }
 
         /// GET api/product/version/codGTIN/{sortDirection}/{pageSize}/{page}/?codigoGTIN={codigoGTIN}
@@ -46,11 +54,52 @@ namespace sefazProcess.Controllers
         [HttpGet, Route("produtos/{sortDirection}/{pageSize}/{page}")]
         public ActionResult FindByCodigoGTIN([FromQuery] long codigoGTIN, string sortDirection, int pageSize, int page)
         {
-            var products = _productBus.FindByKeyWordPaged(codigoGTIN, sortDirection, pageSize, page);
-            
-            if (products == null) return NotFound();
-            return Ok(products);
+            try
+            {
+                if(codigoGTIN == 0)
+                {
+                    return NotFound("não existe esse registro");
+                }
+                else
+                {
+                var products = _productBus.FindByKeyWordPaged(codigoGTIN, sortDirection, pageSize, page);
+                if (products == null) return NotFound();
+                return Ok(products);
+                }
+            }
+            catch
+            {
+                return NotFound();
+            }
         }
+
+        // GET api/product/import
+        [ProducesResponseType(200)]
+        [ProducesResponseType(204)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(401)]
+        [ProducesResponseType(404)]
+        [HttpGet]
+        [Route("import")]
+        public IActionResult Import()
+        {
+
+
+            //var a = FindById(3);
+            
+            //if(a.ToString() == "não existe esse registro")
+            //{
+            //    return NotFound("Já foi executado a criação de banco uma vez!!");
+            //}
+            //else
+            //{
+            Process.Start("CreateImportDB.bat");
+                return Ok();
+            //}
+        }
+
+
         #endregion
+
     }
 }

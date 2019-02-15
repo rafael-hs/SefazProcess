@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -17,6 +18,7 @@ using sefazProcess.Models;
 using sefazProcess.Repository;
 using sefazProcess.Repository.Implementations;
 using Swashbuckle.AspNetCore.Swagger;
+using WebApiContrib.Core.Formatter.Csv;
 
 namespace sefazProcess
 {
@@ -59,6 +61,9 @@ namespace sefazProcess
                 });
             });
             services.AddApiVersioning();
+
+            var csvFormatterOptions = new CsvFormatterOptions();
+
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 

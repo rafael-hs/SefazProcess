@@ -10,7 +10,7 @@ namespace sefazProcess.Models
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite("Filename=sefazProducts.db");
+            optionsBuilder.UseSqlite("Filename=sefazProduct.db");
         }
 
         public DbSet<Product> Product { get; set; }
