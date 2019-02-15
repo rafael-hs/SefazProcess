@@ -1,6 +1,8 @@
 # Teste Backend
 
-- Criei uma aplicação baseada em .net core, usando sqlite como seu banco de dados, todo o banco ja se encontra dentro do projeto no arquivo sefazProducts.db, na hora de fazer a requisição existe alguns parametros, 'desc' do maior valor para o menor, 'asc' do menor para o maior valor de produto.
+- Criei uma aplicação baseada em .net core, usando sqlite como seu banco de dados, todo o banco ja se encontra dentro do projeto no arquivo sefazProducts.db, na hora de fazer a requisição existe alguns parametros, 'desc' do maior valor para o menor, 'asc' do menor para o maior valor de produtos, também tem o numero de produtos que devem aparecer numa pagina e qual pagina vc está no momento.
+
+- versao da API é 1;
 
 - Foi documentado com Swagger, assim facilita o uso de teste.
 
