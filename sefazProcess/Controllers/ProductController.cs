@@ -37,7 +37,7 @@ namespace sefazProcess.Controllers
             }
             catch
             {
-                return NotFound("não existe esse registro ou o banco ainda não foi importado!");
+                return BadRequest();
             }
         }
 
@@ -69,7 +69,7 @@ namespace sefazProcess.Controllers
             }
             catch
             {
-                return NotFound("não existe esse registro ou o banco ainda não foi importado!");
+                return BadRequest();
             }
         }
 
@@ -90,7 +90,7 @@ namespace sefazProcess.Controllers
             }
             catch
             {
-                return NotFound("Algo de errado aconteceu, verifique o arquivo .bat");
+                return BadRequest();
             }
         }
 
