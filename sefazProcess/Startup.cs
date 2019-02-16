@@ -62,9 +62,6 @@ namespace sefazProcess
             });
             services.AddApiVersioning();
 
-            var csvFormatterOptions = new CsvFormatterOptions();
-
-
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             //dependence inject

@@ -19,7 +19,7 @@ namespace sefazProcess.Controllers
         }
 
         #region HTTP GET
-
+ 
         /// // GET api/product/version/{id}
         [ProducesResponseType((200), Type = typeof(List<Product>))]
         [ProducesResponseType(204)]
@@ -32,12 +32,12 @@ namespace sefazProcess.Controllers
             try
             {
             var product = _productBus.FindById(id);
-            if (product == null) return NotFound();
+            if (product == null) return NotFound("não existe esse registro ou o banco ainda não foi importado!");
             return Ok(product);
             }
             catch
             {
-                return NotFound("não existe esse registro");
+                return NotFound("não existe esse registro ou o banco ainda não foi importado!");
             }
         }
 
@@ -58,18 +58,18 @@ namespace sefazProcess.Controllers
             {
                 if(codigoGTIN == 0)
                 {
-                    return NotFound("não existe esse registro");
+                    return NotFound("não existe esse registro ou o banco ainda não foi importado!");
                 }
                 else
                 {
                 var products = _productBus.FindByKeyWordPaged(codigoGTIN, sortDirection, pageSize, page);
-                if (products == null) return NotFound();
+                if (products.List.Count == 0) return NotFound("não existe esses registros ou o banco ainda não foi importado!");
                 return Ok(products);
                 }
             }
             catch
             {
-                return NotFound();
+                return NotFound("não existe esse registro ou o banco ainda não foi importado!");
             }
         }
 
@@ -83,19 +83,15 @@ namespace sefazProcess.Controllers
         [Route("import")]
         public IActionResult Import()
         {
-
-
-            //var a = FindById(3);
-            
-            //if(a.ToString() == "não existe esse registro")
-            //{
-            //    return NotFound("Já foi executado a criação de banco uma vez!!");
-            //}
-            //else
-            //{
+            try
+            {
             Process.Start("CreateImportDB.bat");
-                return Ok();
-            //}
+            return Ok("Importação realizada com sucesso!");
+            }
+            catch
+            {
+                return NotFound("Algo de errado aconteceu, verifique o arquivo .bat");
+            }
         }
 
 
